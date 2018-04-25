@@ -17,9 +17,13 @@ composer require league/fractal
 * 通过第三方扩展包基于 Fractal 实现数据格式转化的
 
 # when?
+* building an API 
 
 # who?
 
+* phper
+
 # where?
+* php apps
 
 # how?
