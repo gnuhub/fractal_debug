@@ -27,3 +27,20 @@ composer require league/fractal
 * php apps
 
 # how?
+
+## concepts
+* Resources 
+* Transformer
+
+### Resources 
+* Resources are objects that represent data
+* Two types of resource exist:
+  * League\Fractal\Resource\Item - A singular resource, probably one entry in a data store
+  * League\Fractal\Resource\Collection - A collection of resources
+### Transformer
+* an object or callback that will know how to output the data
+
+#### why not callbacks for transformers(using Classes for Transformers)
+* limited use
+* data will need to be transformed multiple times and in multiple locations
+* so creating classes to do this work can save code duplication
