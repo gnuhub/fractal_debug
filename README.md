@@ -28,7 +28,7 @@ composer require league/fractal
 
 # how?
 
-## concepts
+## how 0 concepts
 * Resources 
 * Transformer
 
@@ -40,16 +40,17 @@ composer require league/fractal
 ### Transformer
 * an object or callback that will know how to output the data
 
-#### why not callbacks for transformers(using Classes for Transformers)
+## how 1 why not callbacks for transformers(using Classes for Transformers)
 * limited use
 * data will need to be transformed multiple times and in multiple locations
 * so creating classes to do this work can save code duplication
-#### how to create a Transformer class?
+## how 2 how to create a Transformer class?
 * extend League\Fractal\TransformerAbstract
 * contain at the very least a method with the name transform().
-#### how to use the Transformer?
+## how 3 how to use the Transformer?
 * Once the Transformer class is defined, it can be passed as an instance in the resource constructor.
 ```
 $resource = new Fractal\Resource\Item($book, new BookTransformer);
 $resource = new Fractal\Resource\Collection($books, new BookTransformer);
 ```
+## how 4 how to include data?
