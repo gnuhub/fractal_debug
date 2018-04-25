@@ -44,3 +44,12 @@ composer require league/fractal
 * limited use
 * data will need to be transformed multiple times and in multiple locations
 * so creating classes to do this work can save code duplication
+#### how to create a Transformer class?
+* extend League\Fractal\TransformerAbstract
+* contain at the very least a method with the name transform().
+#### how to use the Transformer?
+* Once the Transformer class is defined, it can be passed as an instance in the resource constructor.
+```
+$resource = new Fractal\Resource\Item($book, new BookTransformer);
+$resource = new Fractal\Resource\Collection($books, new BookTransformer);
+```
